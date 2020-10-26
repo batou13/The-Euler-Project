@@ -113,22 +113,28 @@ print(test2)
 #int1 % int2 int2 = int in list
 
 prime_list = [2, 3, 5]
-new_val = int(prime_list[-1] + 2)
+
 
 #print(len(prime_list))
+  
+#while len(newprime_list) < 6:
+def comprime_list():    
+    while len(prime_list) < 6:
+        
+        for i in prime_list:
+            new_val = int(prime_list[-1] + 2)   
+            if new_val % i != False:
+                    
+                prime_list.append(new_val)
+                
+                break
+comprime_list()
+print(prime_list)
+
+
     
-while len(newprime_list) < 6:
-    for i in prime_list:
+
         
-        if new_val % i != 0:
-            
-            prime_list.append(new_val)
-            newprime_list = set(prime_list)
-            print(prime_list)
-            print(newprime_list)
-            break
-        
-print(prime_list) 
 
 
     
