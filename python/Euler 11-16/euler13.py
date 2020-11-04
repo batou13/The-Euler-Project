@@ -204,35 +204,50 @@ x = """37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
+'''
 #This takes the first 50 values of the string,
 # turns them into a list of integers,
 # returns the sum of those integers 
 test_sum = sum([int(i) for i in x[0:50]])
-
 #test print
 print(test_sum)
-
 #HAHA, each line is a 50 digit number,
 # add these 50 numbers together!
 start = 1
 stop = 50
 test_sum2 = x[start-1:stop]
 print(test_sum2)
-print()
-def tester():
+'''
+#Take the sequence of numbers(x) and make
+# a string with """, includes breaks
+
+#Begin with creating a slice length, 
+# this includes the space/line break
+def solve():
     start = 0
     stop = 51
+#Then create a variable to begin
+# the solution, then append more
     value = [int(x[start:stop-1])]
-#    print([int(x[start:stop-1])])
+#This will determine how long the
+# function will repeat; 100 times
+# each time making the slice increase
+# by 50 through the string(x)
     while stop < 5050:
         start += 51
         stop += 51
+#When [start:stop] increase each by 50,
+# the new 50 integer slice is added to
+# the list(value)
         value.append(int(x[start:stop-1]))
-#        print([int(x[start:stop-1])])
+#Create a new list that is the sum of every
+# number in the value list, just created
     tot_value = sum(value)
+#Turn the list into a string and return a 
+# slice of the first 10 integers for solution
     tot_value = str(tot_value)
-    print(tot_value[0:10])
+    return tot_value[0:10]
 
-tester()
+print('The solution is:' ,solve())
 
 
