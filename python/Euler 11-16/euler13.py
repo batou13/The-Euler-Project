@@ -249,5 +249,3 @@ def solve():
     return tot_value[0:10]
 
 print('The solution is:' ,solve())
-
-
