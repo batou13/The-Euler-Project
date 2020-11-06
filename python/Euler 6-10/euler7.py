@@ -112,20 +112,27 @@ print(test2)
 '''
 
 
-prime_list = [2, 3, 5]
+prime_list = [2, 3]
 
-
+new_val = int(prime_list[-1] + 2)   
 
 def com_prime_list():    
+    
     while len(prime_list) < 6:
         
-        for i in prime_list:
-            new_val = int(prime_list[-1] + 2)   
-            if new_val % i != 0:
-                    
+        
+        
+        mod_list = [new_val % i for i in prime_list]
+            
+        for i in range(len(mod_list)):
+            print(mod_list)
+            if mod_list != 0: 
+                
                 prime_list.append(new_val)
                 
-                break
+                
+            
+            
 com_prime_list()
 print(prime_list)
 
