@@ -79,10 +79,6 @@ for i in z:
                 sumz.append(i)
 print(sumz)
 
-    
-
-
-
 for x in range(1, 1000):
 	if x % int(str(z)) != 0:
 		sum.append(x)
@@ -114,25 +110,20 @@ print(test2)
 
 prime_list = [2, 3]
 
-new_val = int(prime_list[-1] + 2)   
-
 def com_prime_list():    
     
     while len(prime_list) < 6:
         
-        
-        
-        mod_list = [new_val % i for i in prime_list]
+        new_val = (int(prime_list[-1] + 2))
+                    
+        for i in range(len(prime_list)):
+
+            print(new_val, [new_val % i for i in prime_list])
             
-        for i in range(len(mod_list)):
-            print(mod_list)
-            if mod_list != 0: 
-                
-                prime_list.append(new_val)
-                
-                
+            break
             
-            
+        prime_list.append(new_val)
+
 com_prime_list()
 print(prime_list)
 
