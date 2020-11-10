@@ -107,25 +107,25 @@ test2 = [i % j for i, j in zip(test_list, test_list2)]
 print(test2)
 '''
 
-
 prime_list = [2, 3]
 
 def com_prime_list():    
-    
-    while len(prime_list) < 6:
+    new_val = 5
+    while len(prime_list) < 10001:
         
-        new_val = (int(prime_list[-1] + 2))
-                    
         for i in range(len(prime_list)):
-
-            print(new_val, [new_val % i for i in prime_list])
             
-            break
-            
-        prime_list.append(new_val)
-
+            j = [new_val % i for i in prime_list]
+            if j.count(0) == 0:
+                #print(new_val, j)
+                prime_list.append(new_val)
+                new_val += 2
+            elif j.count(0) != 0:
+                new_val += 2
+                
 com_prime_list()
-print(prime_list)
+
+print(prime_list[10000])
 
 
     
