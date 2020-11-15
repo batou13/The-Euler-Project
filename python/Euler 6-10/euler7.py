@@ -106,31 +106,31 @@ test_list2 = [i for i in range(1, 26)]
 test2 = [i % j for i, j in zip(test_list, test_list2)]
 print(test2)
 '''
-
+#Create list of primes
 prime_list = [2, 3]
-
+#Function determines each new prime in list
 def com_prime_list():    
+    #new_val acts as primer for new primes
     new_val = 5
+    #Determines how long prime_list will be
     while len(prime_list) < 10001:
-        
-        for i in range(len(prime_list)):
-            
-            j = [new_val % i for i in prime_list]
-            if j.count(0) == 0:
-                #print(new_val, j)
-                prime_list.append(new_val)
-                new_val += 2
-            elif j.count(0) != 0:
-                new_val += 2
-                
+        #Take the new_val and divide it by
+        #every integer, creating a new list
+        #with the remainder of each division
+        x_prime = [new_val % i for i in prime_list]
+        #If the number of remainders that equal 0,
+        #is 0(no factors), it is prime
+        if x_prime.count(0) == 0:
+            #Add this value to prime_list
+            prime_list.append(new_val)
+        #Increase new_val for next evaluation
+        new_val += 2
+            #Similar to above except if the remainder
+            #is 0, it is not prime and does not append
+        #elif x_prime.count(0) != 0:
+            #Increase new_val for next evaluation
+            #new_val += 2
+#Run the function                
 com_prime_list()
-
-print(prime_list[10000])
-
-
-    
-
-        
-
-
-    
+#Print the required solution
+print('The solution is:',prime_list[10000])
