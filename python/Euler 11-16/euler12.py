@@ -25,3 +25,18 @@ number to have over five divisors.
 What is the value of the first triangle 
 number to have over five hundred divisors?
 '''
+
+def print_factors(x):
+    fac_list = []
+   
+    while len(fac_list) < 6:
+        
+        for i in range(1, x + 1):
+            if x % i == 0:
+                fac_list.append(i)
+                print(len(fac_list), num)
+        
+            
+num = 28
+
+print_factors(num)
