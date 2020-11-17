@@ -133,4 +133,4 @@ def com_prime_list():
 #Run the function                
 com_prime_list()
 #Print the required solution
-print('The solution is:',prime_list[10000])
+print('The 10,001st prime number is:',prime_list[10000])
