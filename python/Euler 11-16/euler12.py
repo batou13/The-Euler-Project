@@ -25,19 +25,22 @@ number to have over five divisors.
 What is the value of the first triangle 
 number to have over five hundred divisors?
 '''
+tri_list = [1, 3]
+def triangle_num():
+    while len(tri_list) < 4000:
+        i = tri_list[-1] + (len(tri_list) + 1)
+        tri_list.append(i)
+triangle_num()
+num = tri_list[-1]
+print('The triangle number is', num)
 
+print('This is the',len(tri_list),'th','triangle number')
+
+#return number of divisors in x
 def print_factors(x):
     fac_list = []
-   
-    while len(fac_list) < 7:
-        
-        for i in range(1, x + 1):
-            if x % i == 0:
-                fac_list.append(i)
-                
-                print(len(fac_list), x)
-                
-            
-num = 28
-
+    for i in range(1, x + 1):
+        if x % i == 0:
+            fac_list.append(i)
+    print('Number of divisors:', len(fac_list))
 print_factors(num)
